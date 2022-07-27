@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block header %}{% include 'header.html' %}{% endblock header %}
+{% block content %}
+
+<div class="container mb-5">
+  <h3 class="cap">{{accounts.user.username}}</h3>
+  <div class="row justify-content-center justify-content-md-around justify-content-lg-center text-warning text-center gy-5">
+    <div class="col-10 col-sm-10 col-md-4 col-lg-4 col-xl-4 ">
+      <div class="profile-form px-lg-5">
+        <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">first name</label>
+              <input type="text" value="{{accounts.first_name |title}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">last name</label>
+              <input type="text" value="{{accounts.last_name}}" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Email address</label>
+              <input type="email" value="{{accounts.email}}" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">phone</label>
+              <input type="text" value="{{accounts.phone}}" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">address</label>
+              <input type="text" value="{{accounts.address}}" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">state</label>
+              <input type="text" value="{{accounts.state}}" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-primary">s</button> 
+          </form>
+      </div>
+    </div>
+
+  
+{% endblock content %}
+{% block footer %}{% include 'footer.html' %}{% endblock footer %}

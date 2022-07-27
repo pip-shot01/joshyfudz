@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block header %}{% include 'header.html' %}{% endblock header %}
+{% block content %}
+<h2 class="signup-h2 mb-5">To have access to our full services and your dashboard, <br>
+  kindly signup here or if have an existing account,kindly <span >login</span> here </h2>
+<div class="row ">
+  <div class="col-11 profile-form mt-5">
+    <form action="{% url 'register' %}" method='POST'>
+      {% csrf_token %}
+      <div class="regis-div "> 
+        <label for="text" class="">First Name</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" name="first_name" placeholder="first name">
+      </div>
+      <div class="regis-div ">
+        <label for="text" class="">UserName</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" name="username" placeholder="first name">
+      </div>
+      <div class="regis-div ">
+        <label for="text" class="">last Name</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" name="last_name" placeholder="first name">
+      </div>
+     <div class="regis-div ">
+        <label for="exampleInputEmail1" class="form-label">E-mail</label>
+        <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="regis-div ">
+        <label for="Password" class="">Password</label>
+        <input type="password" class="form-control" id="formGroupExampleInput" name="password1" placeholder="first name">
+      </div>
+      <div class="regis-div ">
+        <label for="password" class="">Repeat Password</label>
+        <input type="password" class="form-control" id="formGroupExampleInput" name="password2" placeholder="first name">
+      </div>
+      <button type="submit" class="btn press-btn ms-md-5 ps-md-4">Submit</button>
+      <div id="emailHelp" class="form-text ms-md-5 ps-md-4">We'll never share your email with anyone else.</div>
+      <a type="submit" class="btn press-btns ms-sm-5 ps-md-4" href="{% url 'login' %}">Login</a>
+        {% for m in messages %}
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>{{m}}</strong> <!--You should check in on some of those fields below.-->
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          {% endfor %}
+        </form>
+    </div>
+  </div>
+{% endblock content %}
+{% block footer %}{% include 'footer.html' %}{% endblock footer %}

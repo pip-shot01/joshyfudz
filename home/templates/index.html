@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}{% include 'header.html' %}{% endblock header %}
+{% block banner %}{% include 'banner.html' %}{% endblock banner %}
+{% block features %}{% include 'features.html' %}{% endblock features %}
+{% block content %}
+<h5 class="menu">OUR MENU</h5>
+<P class="menu_p">Menu That Always <br> Make You Fall In Love</P>
+<div class="list_head  d-none d-lg-block ">
+    <ul>
+        <li><a href=" ">breakfast</a></li>
+        <li><a href="">lunch</a></li>
+        <li><a href="">dinner</a></li>
+        <li><a href="">Dessert</a></li>
+    </ul>
+</div>
+
+<div class="container-fluid">
+  <div class="row gy-5">
+    {% if display %}
+      {% for d in display %}
+        <div class="col-6 col-md-4 col-lg-3">
+        <div class="card  ind-card" style="">
+            <a href="{% url 'displaycart' %}" class="card-link position-absolute start-75 btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="M6.8 22.05q-.875 0-1.488-.612-.612-.613-.612-1.488t.612-1.488q.613-.612 1.488-.612t1.488.612q.612.613.612 1.488t-.612 1.488q-.613.612-1.488.612Zm10.25 0q-.875 0-1.488-.612-.612-.613-.612-1.488t.612-1.488q.613-.612 1.488-.612t1.488.612q.612.613.612 1.488t-.612 1.488q-.613.612-1.488.612ZM12 9.6l-1.5-1.5 1.55-1.525H7.925v-2.15h4.125L10.525 2.9 12 1.4l4.1 4.1ZM.6 3.65V1.5h3.375L8.4 10.7h6.975q.1 0 .163-.038.062-.037.112-.112l3.85-7h2.475l-4.6 8.25q-.25.5-.737.8-.488.3-1.088.3h-7.6l-.85 1.525q-.075.125-.012.25.062.125.212.125h11.85v2.15H6.75q-1.2 0-1.762-1.038-.563-1.037-.013-2.037L6.3 11.4 2.65 3.65Z"/></svg></a>
+            <img src="{{d.img.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h2 class="card-title">Name:{{d.name}}</h2>
+                <h5 class="card-title">Price: ${{d.price}}</h5>
+                 <p class="card-text">Description:{{d.description}}</p>
+                 <p class="card-text"> Max:{{d.max_quantity}}</p>
+                 <p class="card-text">Min:{{d.min_quantity}}</p>
+                <a href="{% url 'details' d.id %}" class="card-link btn btn-primary">Details</a>
+                <a href="{% url 'products' %}" class="card-link btn btn-primary dsmnone">More like this</a>
+            </div>
+        </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+  </div>
+{% endblock content %}
+{% block about %}{% include 'about.html' %}{% endblock about %}
+{% block popular_items %}{% include 'popular_items.html' %}{% endblock popular_items %}
+{% block contacts %}{% include 'contacts.html' %}{% endblock contacts %}
+{% block team %}{% include 'team.html' %}{% endblock team %}
+{% block footer %}{% include 'footer.html' %}{% endblock footer %}

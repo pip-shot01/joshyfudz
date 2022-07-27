@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block header %}{% include 'header.html' %}{% endblock header %}
+{% block banner %}{% include 'banner.html' %}{% endblock banner %}
+{% block content %}
+<div class="container-fluid mb-5 ">
+    <h2 class="menu me-sm-5 " style="margin-top: 10rem; ">BreaKfast Meals</h2>
+    <p class="menu_p" style="font-size:26px">The very-best brekfast meals prepared with the
+       best ingredients and seasoned chefs to provide the daily bread for the stomach</p>
+    <div class="row justify-content-center text-center mt-5 pt-5">
+      {% if product %}
+      {% for item in product %}
+        <div class="col-6 col-sm-6 col-md-4 col-lg-3 ">
+            <div class="card" >
+                <a href="{% url 'displaycart' %}" class="card-link position-absolute start-75 btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="M6.8 22.05q-.875 0-1.488-.612-.612-.613-.612-1.488t.612-1.488q.613-.612 1.488-.612t1.488.612q.612.613.612 1.488t-.612 1.488q-.613.612-1.488.612Zm10.25 0q-.875 0-1.488-.612-.612-.613-.612-1.488t.612-1.488q.613-.612 1.488-.612t1.488.612q.612.613.612 1.488t-.612 1.488q-.613.612-1.488.612ZM12 9.6l-1.5-1.5 1.55-1.525H7.925v-2.15h4.125L10.525 2.9 12 1.4l4.1 4.1ZM.6 3.65V1.5h3.375L8.4 10.7h6.975q.1 0 .163-.038.062-.037.112-.112l3.85-7h2.475l-4.6 8.25q-.25.5-.737.8-.488.3-1.088.3h-7.6l-.85 1.525q-.075.125-.012.25.062.125.212.125h11.85v2.15H6.75q-1.2 0-1.762-1.038-.563-1.037-.013-2.037L6.3 11.4 2.65 3.65Z"/></svg></a>
+                <img src="{{item.img.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><b>NAME:</b> {{item.name}}</h5>
+                  <p class="card-title"><b>PRICE:</b> ${{item.price}}</p>
+                  <p class="card-title"> <b>DESCRIPTION:</b> {{item.description}}</p>
+                  <p class="card-title"><b>MAX:</b> {{item.max_quantity}}</p>
+                  <p class="card-title"><b>MIN:</b> {{item.min_quantity}}</p>
+                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                    <a href="{% url 'details' item.id %}" class="card-link btn btn-primary">Details</a>
+                      <a href="{% url 'displaycart' %}" class="card-link btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+    </div>
+</div>
+<div class="container-fluid mb-5">
+    <h2 class="menu " style="margin-top: 10rem;">Snacks & Appetizers</h2>
+    <p class="menu_p" style="font-size:26px">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Unde facere exercitationem asperiores officia vitae!</p>
+    <div class="row justify-content-center text-center mt-5 pt-5">
+      {% if snacks %}
+      {% for snacks in snacks %}
+        <div class="col-6 col-sm-6 col-md-4 col-lg-3 ">
+            <div class="card">
+                <a href="{% url 'displaycart' %}" class="card-link position-absolute start-75 btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="M6.8 22.05q-.875 0-1.488-.612-.612-.613-.612-1.488t.612-1.488q.613-.612 1.488-.612t1.488.612q.612.613.612 1.488t-.612 1.488q-.613.612-1.488.612Zm10.25 0q-.875 0-1.488-.612-.612-.613-.612-1.488t.612-1.488q.613-.612 1.488-.612t1.488.612q.612.613.612 1.488t-.612 1.488q-.613.612-1.488.612ZM12 9.6l-1.5-1.5 1.55-1.525H7.925v-2.15h4.125L10.525 2.9 12 1.4l4.1 4.1ZM.6 3.65V1.5h3.375L8.4 10.7h6.975q.1 0 .163-.038.062-.037.112-.112l3.85-7h2.475l-4.6 8.25q-.25.5-.737.8-.488.3-1.088.3h-7.6l-.85 1.525q-.075.125-.012.25.062.125.212.125h11.85v2.15H6.75q-1.2 0-1.762-1.038-.563-1.037-.013-2.037L6.3 11.4 2.65 3.65Z"/></svg></a>
+                <img src="{{snacks.img.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><b>NAME:</b> {{snacks.name}}</h5>
+                  <p class="card-title"><b>PRICE:</b> ${{snacks.price}}</p>
+                  <p class="card-title"> <b>DESCRIPTION:</b> {{snacks.description}}</p>
+                  <p class="card-title"><b>MAX:</b> {{snacks.max_quantity}}</p>
+                  <p class="card-title"><b>MIN:</b> {{snacks.min_quantity}}</p>
+                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                    <a href="{% url 'details' snacks.id %}" class="card-link btn btn-primary">Details</a>
+                      <a href="{% url 'displaycart' %}" class="card-link btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+    </div>
+</div>
+<div class="container-fluid mb-5">
+    <h2 class="menu " style="margin-top: 10rem;">Wines & Spirits</h2>
+    <p class="menu_p" style="font-size:26px">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Unde facere exercitationem asperiores officia vitae!</p>
+    <div class="row justify-content-center text-center mt-5 pt-5">
+      {% if Wines %}
+      {% for Wines in Wines %}
+        <div class="col-6 col-sm-6 col-md-4 col-lg-3 ">
+            <div class="card" >
+                <a href="{% url 'displaycart' %}" class="card-link position-absolute start-75 btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="M6.8 22.05q-.875 0-1.488-.612-.612-.613-.612-1.488t.612-1.488q.613-.612 1.488-.612t1.488.612q.612.613.612 1.488t-.612 1.488q-.613.612-1.488.612Zm10.25 0q-.875 0-1.488-.612-.612-.613-.612-1.488t.612-1.488q.613-.612 1.488-.612t1.488.612q.612.613.612 1.488t-.612 1.488q-.613.612-1.488.612ZM12 9.6l-1.5-1.5 1.55-1.525H7.925v-2.15h4.125L10.525 2.9 12 1.4l4.1 4.1ZM.6 3.65V1.5h3.375L8.4 10.7h6.975q.1 0 .163-.038.062-.037.112-.112l3.85-7h2.475l-4.6 8.25q-.25.5-.737.8-.488.3-1.088.3h-7.6l-.85 1.525q-.075.125-.012.25.062.125.212.125h11.85v2.15H6.75q-1.2 0-1.762-1.038-.563-1.037-.013-2.037L6.3 11.4 2.65 3.65Z"/></svg></a>
+                <img src="{{Wines.img.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><b>NAME:</b> {{Wines.name}}</h5>
+                  <p class="card-title"><b>PRICE:</b> ${{Wines.price}}</p>
+                  <p class="card-title"> <b>DESCRIPTION:</b> {{Wines.description}}</p>
+                  <p class="card-title"><b>MAX:</b> {{Wines.max_quantity}}</p>
+                  <p class="card-title"><b>MIN:</b> {{Wines.min_quantity}}</p>
+
+                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                    <a href="{% url 'details' Wines.id %}" class="card-link btn btn-primary">Details</a>
+                    <a href="{% url 'displaycart' %}" class="card-link btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+    </div>
+</div>
+
+{% endblock content %}
+{% block footer %}{% include 'footer.html' %}{% endblock footer %}

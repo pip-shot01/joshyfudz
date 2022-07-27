@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&display=swap');
+/* header  */
+::-webkit-scrollbar {
+    width: 7px;
+    border: 2px solid blue;
+}
+::-webkit-scrollbar-button {
+    background-color: orangered;
+    height: 16px;
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: orangered;
+}
+::-webkit-scrollbar-track {
+    background: rgb(253, 232, 238);
+}
+
+
+
+
+
+
+.navbar{
+    background-color: rgb(253, 232, 238);
+}
+.nav-item ul{
+    align-items: center;
+    justify-content: center;
+}
+.navbar-brand{
+    font-size: 30px;
+    font-weight: 800;
+    font-family: sans-serif;
+    
+}
+.nav-item a{
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.nav-item a:hover{
+    color: whitesmoke;
+    border-radius: 1rem ;
+    background-color: orangered;
+    /* padding: 1rem; */
+    /* width: 100%; */
+    transition: all;
+    transition-duration: 1s; 
+    cursor: pointer;   
+
+}
+.dropdown-menu{
+    background-color:rgb(245, 230, 231) ;
+    border: none;
+    outline: none;
+}
+#ogs{
+   background-color: orangered;
+   color: whitesmoke; 
+   border-radius: .9rem;
+   padding: .8rem;
+   font-size: 15px;
+   text-align: center;
+}
+/* header done */
+
+
+/* banner  */
+.hero-head{
+    background-color: rgb(253, 232, 238);
+    height: 50rem;
+    align-items: center;
+}
+.hero-head h5{
+    text-transform: uppercase;
+    background-color: rgb(255, 236, 200);
+    border-radius: 4rem;
+    color: orange;
+    width: 50%;
+    font-size: small;
+    font-size: 13px;
+    text-align: center;
+    font-weight: 700;
+    /* justify-content: start; */
+}
+.hero-head h2{
+    color: rgb(24, 24, 47);
+    font-size: 45px;
+    font-family: 'arial';
+    font-weight: 900;
+}
+.hero-head h4{
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    font-size: large;
+    line-height: 1.9rem;
+    margin-top: 1.9rem;
+}
+.pi{
+    background-color: orangered;
+    /* color: whitesmoke; */
+    border-radius: 3rem;
+    width: 19rem;
+    padding: .7rem;
+    color: whitesmoke;
+}
+.p1{
+    border: .2rem solid orangered;
+    border-radius: 3rem;
+    width: 19rem;
+    padding: .5rem;
+    /* margin-left: 1rem; */
+
+}
+.p1:hover{
+    background-color: orangered;
+    color: whitesmoke;
+    transition: all;
+    transition-duration: 1s;
+}
+.p22{
+    display: flex;
+    /* justify-content: space-around; */
+    text-align: center;
+    align-items: flex-start;
+    padding-top: 2rem;
+}
+/* banner done */
+
+
+/* features  */
+.subs h5{
+    text-transform: uppercase;
+    background-color: rgb(255, 236, 200);
+    border-radius: 4rem;
+    color: orange;
+    font-size: small;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    width: max-content;
+    padding: .5rem;
+    margin: 0rem 5rem 2rem -43rem;
+    
+}
+.subs p{
+    color: rgb(9, 9, 84);
+    font-size: 44px;
+    font-weight: 800;
+    font-family: 'Roboto', sans-serif;
+}
+#feat{
+    padding-top: 10rem;
+    height: 43rem;
+    background-color: rgb(253, 251, 251);
+    align-items: center;
+    justify-content: center;
+}
+/* #feat {
+    background-color: rgb(255, 236, 200);
+    border-radius: 4rem;
+    color: orange;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    width: max-content;
+    padding: .5rem;
+    justify-content: center;
+} */
+/* features done */
+.menu{
+    text-transform: uppercase;
+    background-color: rgb(255, 236, 200);
+    border-radius: 4rem;
+    color: orange;
+    font-size: small;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    width: max-content;
+    padding: .5rem;
+    margin: 0rem 5rem 2rem 43rem;
+}
+.menu_p{
+    color: rgb(9, 9, 84);
+    font-size: 40px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    line-height: 3.9rem;
+}
+.list_head ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    margin-bottom: 8rem;
+    margin-top: 4rem;
+
+}
+.list_head a{
+    text-decoration: none;
+    background-color: orange;
+    color: whitesmoke; 
+    border-radius: 1.3rem;
+    padding: .8rem;
+    width: 30%;
+    font-size: 15px;
+    text-align: center;
+
+}
+/* Abouts  */
+.about_us{
+    margin-top: 18rem;
+    justify-content: space-around;
+    background-color: rgb(253, 232, 238);
+    height: 30rem;
+    
+}
+.about_us h4{
+    text-transform: uppercase;
+    background-color: rgb(255, 236, 200);
+    border-radius: 4rem;
+    color: orange;
+    font-size: small;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    width: max-content;
+    padding: .5rem;
+    margin: 0rem 5rem 2rem 37rem;
+}
+.about_us h3{
+    color: rgb(9, 9, 84);
+    font-size: 40px;
+    font-weight: 800;
+    font-family: 'Roboto', sans-serif;
+    text-align: start;
+    line-height: 3.9rem;
+}
+.about_us p{
+    font-size: small;
+    font-family: 'Edu TAS Beginner', cursive;
+}
+/* Abouts done */
+
+/* most popular items  */
+.popular_item{
+    justify-content: space-around;
+    margin-top: 14rem;
+    margin-left: 8rem;
+}
+.popular_item h3{
+    text-transform: uppercase;
+    background-color: rgb(255, 236, 200);
+    border-radius: 4rem;
+    color: orange;
+    font-size: small;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    width: max-content;
+    padding: .5rem;
+}
+.popular_item h2{
+    color: rgb(9, 9, 84);
+    font-size: 40px;
+    font-weight: 800;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    line-height: 3.9rem;
+    margin-bottom: 3rem;
+}
+.pops{
+    text-transform: capitalize;
+    background-color: orange;
+    border-radius: 1.9rem;
+    color: whitesmoke;
+    font-size: large;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    width: fit-content;
+    padding: 1.5rem;
+    margin: 4rem 5rem 8rem 37rem;
+    justify-content: center;
+}
+/* most popular items done */
+
+/* contact us  */
+.contacts-form{
+    background-color: rgb(255, 241, 245);
+    /* background-color: red; */
+    margin-top: 14rem;
+    /* padding-top: 2.4rem; */
+    justify-content: center;
+    height: 30rem;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+.contacts-form h2{
+    color: rgb(9, 9, 84);
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.contacts-form p{
+    line-height: 2rem;
+}
+.contacts-form label{
+    font-size: 20px;
+}
+/* contact us done */
+
+/* team  */
+.team_member h5{
+    text-transform: uppercase;
+    background-color: rgb(255, 236, 200);
+    border-radius: 4rem;
+    color: orange;
+    font-size: small;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    width: max-content;
+    padding: .5rem;
+}
+.team_member h3{
+    color: rgb(9, 9, 84);
+    font-size: 44px;
+    font-weight: 800;
+    font-family: 'Roboto', sans-serif;
+    text-align: start;
+    line-height: 2.9rem;
+    margin-bottom: 1.9rem;
+}
+/* team done */
+
+
+/* footer  */
+.foots{
+    margin-top: 14rem;
+    font-family: 'Kanit', sans-serif;
+    font-size: large;  
+    font-weight: 700;
+    background-color: rgb(253, 232, 238);
+    align-items: center; 
+    height: 27rem; 
+    padding-top: 190rem;
+}
+.foots ul{
+    list-style: none;
+    text-align: center;
+}
+.foots h3{
+    color: rgb(9, 9, 84);
+    font-family: 'Mukta', sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+.awes{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+/* footer done */
+
+body {
+   background-color: rgb(255, 249, 249);
+   /* background-color: red; */
+   /* background-color: rgb(255, 245, 246); */
+   
+}
+*{
+    padding: 0%;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.profile-form input{
+    background: peachpuff;
+    color: crimson;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.profile-form input:focus{
+    background: peachpuff;
+    color: crimson;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.profile-form label{
+    color: crimson;
+    font-weight: 600;
+}
+
+
+
+/* media queries */
+
+
+@media(max-width:702px){
+    body{
+        /* background-color: rgb(226, 40, 71); */
+        width: 100%;
+        /* color: rgb(67, 165, 42); */
+    }
+    .offcanvas-body, .offcanvas-header{
+        background-color: rgb(253, 232, 238);
+    }
+    .hero-head h2, h4, h5, .p22{
+        margin-left: 2rem;
+    }
+    .subz h5{
+        margin-left: 4rem;
+    }
+    .menu{
+        margin-top: 19rem;
+        margin-left: 10rem;
+        margin-right: 0rem;
+    }
+    .index-card{
+        width: 12rem;
+        height: fit-content;
+        margin-left: 4rem;
+    }
+    .about_us h4{
+        margin: 0rem 51rem 2rem 0rem;
+        margin-bottom: -1rem;
+    }
+    .about_us{
+        height: 50rem;
+
+    }
+    .about_us img{
+        width: 50vh;
+    }
+    .popular_item{
+        justify-content: space-around;
+        margin-top: 14rem;
+    }
+    .pops{
+        border-radius: 2rem;
+        width: 45%;
+        padding: 1rem;
+        text-align: center;
+        align-items: center;
+        /* justify-content: center; */
+        margin: 3rem 0rem 0rem 8rem;
+    }
+    .contacts-form{
+        margin-bottom: 60rem;
+        height: 60rem;
+    }
+    .contacts-form input{
+        outline: none;
+        border: none;
+    }
+    .contacts-form h2{
+        color: rgb(9, 9, 84);
+        font-size: 30px;
+        font-weight: 800;
+    }
+    .team_member{
+        padding-top: 16rem;
+        margin-bottom: -4rem;
+    }
+    .dsmnone{
+        display: none;
+    }
+    .awes{
+        width: 20%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+}
+
+@media(max-width:600px){
+    body{
+        /* background-color: green; */
+        /* color: red; */
+    }
+    .signup-h2{
+        margin-bottom: 7rem;
+        font-size: larger;
+        font-family:  sans-serif;
+        line-height: 2.3rem;
+        margin-top: 5rem;
+    }
+    .press-btn{
+        margin-left: 5rem;
+    }
+}
+@media(max-width:770px){
+    body{
+        /* background-color: rgb(48, 15, 128); */
+        /* color: yellow; */
+        width: 100%;
+    }
+    .regis input{
+        width: 100%;
+    }
+    .catalogue{
+        width: 45rem;
+    }
+    .dsmnone{
+        display: none;
+    }
+    .menu{
+        margin-top: 19rem;
+        margin-left: 19rem;
+        margin-right: 0rem;
+    }
+    .popular_item{
+        margin-left: -8rem;
+    }
+    .popitem{
+        width: 190vh;
+        padding-left: 14rem;
+    }
+    .pops{
+        border-radius: 2rem;
+        width: 45%;
+        padding: 1rem;
+        font-size: 20px;
+        text-align: center;
+        align-items: center;
+        /* justify-content: center; */
+        margin: 3rem 0rem 0rem -10rem;
+    }
+    .contacts-form{
+        margin-bottom: 40rem;
+        height: 40rem;
+    }
+    .contacts-form input{
+        outline: none;
+        border: none;
+    }
+    .contacts-form h2{
+        color: rgb(9, 9, 84);
+        font-size: 20px;
+        font-weight: 800;
+    }
+    .cf{
+        border: .2rem solid orangered;
+        border-top-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+
+    }
+    .team_member{
+        padding-top: 16rem;
+        margin-bottom: -4rem;
+    }
+    .nomba{
+        padding-top: 10rem;
+    }
+    .foots{
+        padding-top: 5rem;
+    }
+    .awes{
+        width: 20%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .signup-h2{
+       
+        text-align: center;
+        margin-bottom: 7rem;
+        font-size: larger;
+        font-family:  sans-serif;
+        line-height: 2.3rem;
+        margin-top: 5rem;
+    }
+}
+@media(max-width:1010px){
+    body{
+        /* background-color: blueviolet; */
+    }
+    .dsmnone{
+        display: none;
+    }
+    .menu{
+        margin-top: 19rem;
+        margin-left: 19rem;
+        margin-right: 0rem;
+    }
+    .signup-h2{
+        color: rgb(9, 9, 84);
+        text-align: center;
+        margin-bottom: 7rem;
+        font-size: larger;
+        font-family:  sans-serif;
+        line-height: 2.3rem;
+        margin-top: 5rem;
+    }
+   
+    .pops{
+        border-radius: 2rem;
+        width:27%;
+        padding: 1rem;
+        text-align: center;
+        align-items: center;
+        /* justify-content: center; */
+        margin: 3rem 0rem 0rem 19rem;
+    }
+}

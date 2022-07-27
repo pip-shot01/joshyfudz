@@ -1,0 +1,135 @@
+
+<nav class="navbar navbar-expand-lg sticky-top" >
+    <div class="container-fluid" id="head_ings">
+      <a class="navbar-brand ms-2 mt-auto ps-5" href="{% url 'index' %}"><span style="color: darkblue;">Joshy</span><span style="color:orangered ;">Fudz</span></a>  
+      <button class="btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+      <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M5.5 36.8v-3.95h13v3.95Zm0-10.8v-4h25v4Zm0-10.85V11.2h37v3.95Z"/>
+    </svg></button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <!-- <h5 id="offcanvasRightLabel">Offcanvas right</h5> -->
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+      </button>
+        <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
+          {% if request.user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+          </li>  
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true" >Services</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}">Meals & Services</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}">Snacks & Appetizers</a></li>
+                <li><a class="dropdown-item" onclick="return confirm('Scroll down please to see our available Meals!!!')" 
+                 href="{% url 'products' %}">Wines & Spirits</a></li>
+                <li><hr class="dropdown-divider"></li>
+              </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{% url 'profile' %}">Account</a></li>
+              <li><a class="dropdown-item" href="{% url 'password' %}">change-password</a></li>
+              <!-- <li><hr class="dropdown-divider"></li> -->
+              <li><a class="dropdown-item" href="{% url 'profile_update' %}">update-profile</a></li>
+            </ul>
+          </li>
+          <li class="nav-item" href="login" >
+            <a class="nav-link" href="#serv" href="a#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#ab">About</a>
+          </li>
+        </ul>
+        <li class="nav-item navbar-nav">
+            <a href="{% url 'login' %}" class="nav-link me-1"  >Welcome  {{request.user.username}}</a>
+        </li> 
+        <li class="nav-item navbar-nav">
+            <a href="{% url 'logout' %}" class="nav-link me-1"  id="ogs">LOGOUT</a>
+        </li> 
+        {% else %}
+        <div class="subz me-5 pe-5">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#serv" href="{% url 'index' %}">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ab">About</a>
+            </li>
+          </div>
+            <div class="subz1 ms-md-5 ps-md-5">
+            <li class="nav-ite mt-2 ms-md-5">
+              <a href="{% url 'login' %}" >ORDER NOW</a>
+            </li> 
+            <li class="nav-ites mt-2 ms-3" >
+                <a href="{% url 'register' %}"class="sub-nav">SIGNUP</a>
+            </li> 
+          </div>
+      </div>
+      {% endif %}
+        <!-- <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> -->
+      </div>
+    </div>
+  </nav>
+
+
+  {% for m in messages %}
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>{{m}}</strong> <!--You should check in on some of those fields below.-->
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endfor %}
+
+  <style>
+    .subz{
+      display: flex;
+    }
+    .subz1{
+      display: flex;
+    }
+    .nav-ite a{
+      text-decoration: none;
+      font-size: 19px;
+      font-weight: 600;
+      font-family: sans-serif;
+      color: black;
+      text-align: center;
+      height: 4rem;
+
+    }
+    .nav-ites a{
+      text-decoration: none;
+      font-size: 19px;
+      font-weight: 600;
+      font-family: sans-serif;
+      color: black;
+    }
+    
+    .nav-ite a:hover{
+      color: whitesmoke;
+      border-radius: 1rem ;
+      background-color: orangered;
+      transition: all;
+      transition-duration: 1s; 
+      cursor: pointer; 
+      text-align: center;
+    }
+    .nav-ites a:hover{
+      color: whitesmoke;
+      border-radius: 1rem ;
+      background-color: orangered;
+      transition: all;
+      transition-duration: 1s; 
+      cursor: pointer; 
+      text-align: center;
+    }
+  </style>

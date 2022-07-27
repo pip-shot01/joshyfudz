@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block header %}{% include 'header.html' %}{% endblock header %}
+{% block content %}
+<h2 class="signup-h2" style="margin-bottom: 10rem;">To have access to your Account, <br>
+  kindly login here or if have an existing account already </h2>
+<div class="row justify-content-md-center">
+  <div class="col-11  profile-form mb-5" style="margin-bottom: -25rem;">
+    <form action="{% url 'login' %}" method='POST'>
+      {% csrf_token %}
+      <div class="mb-1 regis-div">
+        <label for="text" class="">UserName</label>
+        <input type="text" class="form-control " id="formGroupExampleInput" name="username" placeholder="first name">
+      </div>
+      <div class="mb-1 regis-div">
+        <label for="Password" class="">Password</label>
+        <input type="password" class="form-control" id="formGroupExampleInput" name="password" placeholder="first name">
+      </div>
+        <button type="submit" class="btn press-btn w-25 ms-sm-5 ms-lg-none">Submit</button>
+
+        {% for m in messages %}
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>{{m}}</strong> <!--You should check in on some of those fields below.-->
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          {% endfor %}
+        </form>
+    </div>
+  </div>
+{% endblock content %}
+{% block footer %}{% include 'footer.html' %}{% endblock footer %}

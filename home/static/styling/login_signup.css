@@ -1,0 +1,63 @@
+
+.regis{
+    padding: 14rem;
+    justify-items: center;
+    width: 100%;
+}
+.regis-div {
+    font-size: 20px;
+    margin-left: 5rem;
+    margin-top: 3rem;
+    font-family: sans-serif, 'arial';
+}
+
+.regis-div #emailHelp{
+    font-size: 15px;
+    padding-top: 1rem;
+}
+.regis-div input{
+    width: 80%;
+    outline-style: dashed;
+    outline-width: 1px;
+    border: none;
+    color: rgb(9, 9, 84);
+
+}
+.signup-h2{
+    color: rgb(9, 9, 84);
+    text-align: center;
+    margin-bottom: -9%;
+    font-size: larger;
+    font-family:  sans-serif;
+    line-height: 2.3rem;
+    margin-top: 5rem;
+}
+.press-btn{
+    color: blanchedalmond;
+    outline: none;
+    border: none;
+    background-color: orangered;
+    font-size: 14px;
+    width: 10%;
+    border-radius: 1rem;
+    font-weight: 600;
+    padding: .9rem;
+    margin-top: 2rem;
+}
+.press-btns{
+    outline: none;
+    border: none;
+    border: .1rem solid orangered;
+    font-size: 14px;
+    width: 20%;
+    border-radius: 2rem;
+    font-weight: 600;
+    padding: .6rem;
+    margin-top: 2rem;
+}
+.press-btns:hover{
+    background-color: orangered;
+    transition: 1s ease;
+
+}
+
